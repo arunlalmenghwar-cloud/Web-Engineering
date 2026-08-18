@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            text-align: center;
+            background: white;
+            padding: 30px 20px 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            width: 300px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 12px;
+            border: 3px solid #ddd;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #1a2e3f;
+            margin: 0 0 4px;
+        }
+
+        p {
+            color: #4a6a7e;
+            font-size: 14px;
+            margin: 0 0 18px;
+        }
+
+        button {
+            background: #1f4b5e;
+            color: white;
+            border: none;
+            padding: 8px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e637a;
+        }
+
+        #msg {
+            margin-top: 14px;
+            font-size: 18px;
+            color: #1a3342;
+            background: #eef4f9;
+            padding: 6px 16px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <!-- picture -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%233b7a9e' /%3E%3Ccircle cx='34' cy='40' r='6' fill='%23f5e9d8' /%3E%3Ccircle cx='66' cy='40' r='6' fill='%23f5e9d8' /%3E%3Ccircle cx='34' cy='40' r='2.5' fill='%231a3342' /%3E%3Ccircle cx='66' cy='40' r='2.5' fill='%231a3342' /%3E%3Cpath d='M34 58c0 0 8 13 16 13s16-13 16-13' stroke='%23f5e9d8' stroke-width='5' fill='none' stroke-linecap='round' /%3E%3C/svg%3E" alt="picture">
+
+    <h1>Hello, World!</h1>
+    <p>simple</p>
+
+    <button id="btn">Click</button>
+    <div id="msg">🌍 Hi</div>
+</div>
+
+<script>
+    const btn = document.getElementById('btn');
+    const msg = document.getElementById('msg');
+    const texts = ["🌍 Hi", "👋 Hello", "😊 Hey", "✨ Wow", "🚀 Hi again"];
+    let i = 0;
+
+    btn.onclick = function() {
+        msg.textContent = texts[i % texts.length];
+        i++;
+    };
+</script>
+
+</body>
+</html>
