@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh; 
+            display: flex;
+            justify-content: center;            
+            align-items: center;
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }           
+
+        .profile-container {
+            text-align: center;
+            background: white;
+            padding: 30px 20px 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            width: 300px;
+        }   
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 12px;
+            border: 3px solid #ddd;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #1a2e3f;
+            margin: 0 0 4px;
+        }
+
+        p {
+            color: #4a6a7e;
+            font-size: 14px;
+            margin: 0 0 18px;
+        }
+
+        button {
+            background: #1f4b5e;
+            color: white;
+            border: none;
+            padding: 8px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e637a;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h1>Arun</h1>
+        
+        <p>Welcome to my profile page!</p>
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <script>
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });         
+    </script>
+</body>
+</html> 
